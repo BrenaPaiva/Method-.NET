@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BPAIVA\\Projetos\\TESTES\\ExemploExplorando\\ExemploExplorando.csproj",
+      "projectUniqueName": "C:\\Users\\BPAIVA\\Projetos\\TESTES\\Meu dotnet\\ExemploExplorando\\ExemploExplorando.csproj",
       "projectName": "ExemploExplorando",
-      "projectPath": "C:\\Users\\BPAIVA\\Projetos\\TESTES\\ExemploExplorando\\ExemploExplorando.csproj",
+      "projectPath": "C:\\Users\\BPAIVA\\Projetos\\TESTES\\Meu dotnet\\ExemploExplorando\\ExemploExplorando.csproj",
       "packagesPath": "C:\\Users\\BPAIVA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BPAIVA\\Projetos\\TESTES\\ExemploExplorando\\obj\\",
+      "outputPath": "C:\\Users\\BPAIVA\\Projetos\\TESTES\\Meu dotnet\\ExemploExplorando\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BPAIVA\\AppData\\Roaming\\NuGet\\NuGet.Config",
