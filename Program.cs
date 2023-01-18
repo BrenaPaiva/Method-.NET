@@ -1,8 +1,14 @@
 ﻿using ExemploExplorando.Models;
 
-Pessoa p1 = new Pessoa();
-p1.Name = "Brena";
-p1.Age = 22;
-p1.Sobrenome = "Paiva";
+Pessoa p1 = new Pessoa("Brena", "Gustavo");
+Pessoa p2 = new Pessoa("Paiva", "Siqueira");
 
-p1.Apresentar();
+
+Curso cursoDeIngles = new Curso();
+
+cursoDeIngles.Nome = "Ingles";
+cursoDeIngles.Alunos = new List<Pessoa>();
+
+cursoDeIngles.AdicionarAluno(p1);
+cursoDeIngles.AdicionarAluno(p2);
+cursoDeIngles.ListarAlunos();
