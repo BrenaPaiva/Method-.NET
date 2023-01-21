@@ -4,25 +4,160 @@ using System.Globalization;
 
 
 
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+estados.Add("SP", "São Paulo");
+estados.Add("GO", "Goiás");
+estados.Add("RJ", "Rio de Janeiro");
+
+foreach(var item in estados )
+{
+    Console.WriteLine($"Chave: {item.Key} value{item.Value}");
+}
+Console.WriteLine("-------------------------------");
+
+estados.Remove("RJ");
+estados["GO"] = "Valor de Goiás alterado";
+
+foreach(var item in estados )
+{
+    Console.WriteLine($"Chave: {item.Key}, {item.Value}");
+}
+
+string chave = "DA";
+Console.WriteLine($"Chave: {chave}");
+
+if(estados.ContainsKey(chave))
+{
+    Console.WriteLine($"Valor existente: {chave}");
+}
+else{
+    Console.WriteLine($"Valor não existe: {chave}");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Stack<int> pilha = new Stack<int>();
+// pilha.Push(6);
+// pilha.Push(7);
+// pilha.Push(8);
+// pilha.Push(10);
+
+// foreach(int item in pilha)
+// {
+//     Console.WriteLine(item);
+// }
+//  //remove e retorna o topo do obeto da bilha
+
+// Console.WriteLine($" Removendo o elemento do topo: {pilha.Pop()}");
+
+// pilha.Push(20);
+// foreach(int item in pilha)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FILA
+// Queue<int> fila = new Queue<int>();
+
+// fila.Enqueue(2);
+// fila.Enqueue(8);
+// fila.Enqueue(7);
+// fila.Enqueue(9);
+
+// foreach(int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+// Console.WriteLine($"Removendo o primeiro elemento: {fila.Dequeue()} ");
+
+// foreach(int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// new ExemploExcecao().Method1();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////LEITURA DE ARQUIVO EM TEXTO e demonstração de erro com try catch
 
-try{
-string[] linhas = File.ReadAllLines("Arquivos/arquivo_arquivoLeeitura.txt");
+// try{
+// string[] linhas = File.ReadAllLines("Arquivos/arquivo_arquivoLeeitura.txt");
 
-foreach(string linha in linhas)
-{
-    Console.WriteLine(linha);
-}
-} catch (FieldAccessException ex)
-{
-    Console.WriteLine($"Erro na leitura do arquivo. Arquivo não encontrado: {ex.Message}");
-}
- catch (Exception ex)
-{
-    Console.WriteLine($"Ocorreu uma exceção genérica: {ex.Message}");
-}
+// foreach(string linha in linhas)
+// {
+//     Console.WriteLine(linha);
+// }
+// } catch (FieldAccessException ex)
+// {
+//     Console.WriteLine($"Erro na leitura do arquivo. Arquivo não encontrado: {ex.Message}");
+// }
+//  catch (Exception ex)
+// {
+//     Console.WriteLine($"Ocorreu uma exceção genérica: {ex.Message}");
+// }
 
-Console.WriteLine("Chegou até aqui");
+// Console.WriteLine("Chegou até aqui");
 
 
 

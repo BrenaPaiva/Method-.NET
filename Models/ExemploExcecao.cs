@@ -7,24 +7,24 @@ namespace ExemploExplorando.Models
 {
     public class ExemploExcecao
     {
-        public void M1()
+        public void Method1()
         {
             try{
-                M4();
+                Method4();
             }catch (Exception e) {
-                Console.WriteLine("Eceção tratada" + e.StackTrace); //Message
+                Console.WriteLine("Exceção tratada. " + e.Message); //Se não tiver ninguém, ele irá exibir o StackTrace(Minha mensagem gigante)
             }
-            M2();
+            
         }
-        public void M2()
+        public void Method2()
         {
-            M3();
+            Method3();
         }
-        public void M3()
+        public void Method3()
         {
-            M4();
+            Method4();
         }
-        public void M4()
+        public void Method4()
         {
             throw new Exception("Ocorreu uma exceção");
         }
