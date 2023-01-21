@@ -4,22 +4,25 @@ using System.Globalization;
 
 
 
-////////////////////////////////LEITURA DE ARQUIVO EM TEXTO
+////////////////////////////////LEITURA DE ARQUIVO EM TEXTO e demonstração de erro com try catch
 
 try{
-string[] linhas = File.ReadAllLines("Arquivos/arquivoLeeitura.txt");
+string[] linhas = File.ReadAllLines("Arquivos/arquivo_arquivoLeeitura.txt");
 
 foreach(string linha in linhas)
 {
     Console.WriteLine(linha);
 }
-} catch (Exception ex)
+} catch (FieldAccessException ex)
+{
+    Console.WriteLine($"Erro na leitura do arquivo. Arquivo não encontrado: {ex.Message}");
+}
+ catch (Exception ex)
 {
     Console.WriteLine($"Ocorreu uma exceção genérica: {ex.Message}");
 }
 
-
-
+Console.WriteLine("Chegou até aqui");
 
 
 
