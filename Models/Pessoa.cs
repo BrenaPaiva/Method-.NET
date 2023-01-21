@@ -13,8 +13,8 @@ namespace ExemploExplorando.Models
             Name = nome;
             Sobrenome = sobrenome;
         }
-        private string _name;
-        private int _idade;
+            private string _name;
+            private int _idade;
 
         public string Name { 
             get =>_name.ToUpper();

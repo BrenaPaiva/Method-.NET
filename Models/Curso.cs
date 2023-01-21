@@ -32,8 +32,8 @@ namespace ExemploExplorando.Models
 
             for (int count = 0; count < Alunos.Count; count++)
             {
-                string texto = "N° " + count + " - " + Alunos[count].NomeCompleto;
-                Console.WriteLine(texto);
+                string texto = $"N° {count + 1}  - {Alunos[count].NomeCompleto}"; //interpolaçao(tirando o "+" de concatenação)
+                Console.WriteLine(texto); //Por baixo dos panos, count +1 soma o valor original com +1 sem alterar o valor da minha variavel
             }
             
         }
