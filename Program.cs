@@ -2,38 +2,72 @@
 using System.Globalization;
 
 
+(int, string, string) tupla =  (22, "Brena", "Paiva");
+
+Console.WriteLine($"Idade: {tupla.Item1}");
+Console.WriteLine($"Nome: {tupla.Item2}");
+Console.WriteLine($"Sobrenome: {tupla.Item3}");
 
 
-Dictionary<string, string> estados = new Dictionary<string, string>();
 
-estados.Add("SP", "São Paulo");
-estados.Add("GO", "Goiás");
-estados.Add("RJ", "Rio de Janeiro");
 
-foreach(var item in estados )
-{
-    Console.WriteLine($"Chave: {item.Key} value{item.Value}");
-}
-Console.WriteLine("-------------------------------");
 
-estados.Remove("RJ");
-estados["GO"] = "Valor de Goiás alterado";
 
-foreach(var item in estados )
-{
-    Console.WriteLine($"Chave: {item.Key}, {item.Value}");
-}
 
-string chave = "DA";
-Console.WriteLine($"Chave: {chave}");
 
-if(estados.ContainsKey(chave))
-{
-    Console.WriteLine($"Valor existente: {chave}");
-}
-else{
-    Console.WriteLine($"Valor não existe: {chave}");
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Dictionary<string, string> estados = new Dictionary<string, string>();
+
+// estados.Add("SP", "São Paulo");
+// estados.Add("GO", "Goiás");
+// estados.Add("RJ", "Rio de Janeiro");
+
+// foreach(var item in estados )
+// {
+//     Console.WriteLine($"Chave: {item.Key} value{item.Value}");
+// }
+// Console.WriteLine("-------------------------------");
+
+// estados.Remove("RJ");
+// estados["GO"] = "Valor de Goiás alterado";
+
+// foreach(var item in estados )
+// {
+//     Console.WriteLine($"Chave: {item.Key}, {item.Value}");
+// }
+
+// string chave = "DA";
+// Console.WriteLine($"Chave: {chave}");
+
+// if(estados.ContainsKey(chave))
+// {
+//     Console.WriteLine($"Valor existente: {chave}");
+// }
+// else{
+//     Console.WriteLine($"Valor não existe: {chave}");
+// }
 
 
 
