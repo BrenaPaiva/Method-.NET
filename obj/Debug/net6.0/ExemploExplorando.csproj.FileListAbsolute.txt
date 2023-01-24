@@ -28,3 +28,5 @@ C:\Users\BPAIVA\Projetos\TESTES\Meu dotnet\ExemploExplorando\obj\Debug\net6.0\re
 C:\Users\BPAIVA\Projetos\TESTES\Meu dotnet\ExemploExplorando\obj\Debug\net6.0\ExemploExplorando.pdb
 C:\Users\BPAIVA\Projetos\TESTES\Meu dotnet\ExemploExplorando\obj\Debug\net6.0\ExemploExplorando.genruntimeconfig.cache
 C:\Users\BPAIVA\Projetos\TESTES\Meu dotnet\ExemploExplorando\obj\Debug\net6.0\ref\ExemploExplorando.dll
+C:\Users\BPAIVA\Projetos\TESTES\Meu dotnet\ExemploExplorando\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\BPAIVA\Projetos\TESTES\Meu dotnet\ExemploExplorando\obj\Debug\net6.0\ExemploExplorando.csproj.CopyComplete

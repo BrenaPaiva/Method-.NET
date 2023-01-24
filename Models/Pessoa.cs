@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 namespace ExemploExplorando.Models
 {
     public class Pessoa
-    {
+    {   
+        public Pessoa()
+        {
+
+        }
         
         public Pessoa(string nome, string sobrenome)
         {
             Name = nome;
             Sobrenome = sobrenome;
+        }
+        public void Deconstruct(out string nome, out string sobrenome)
+        {
+             nome = Name;
+            sobrenome = Sobrenome;
         }
             private string _name;
             private int _idade;

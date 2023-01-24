@@ -1,12 +1,113 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
+using Newtonsoft.Json;
 
 
-(int, string, string) tupla =  (22, "Brena", "Paiva");
+Venda v1 = new Venda(1, "Material de escritório", 25.00M);
 
-Console.WriteLine($"Idade: {tupla.Item1}");
-Console.WriteLine($"Nome: {tupla.Item2}");
-Console.WriteLine($"Sobrenome: {tupla.Item3}");
+string serializado = JsonConvert.SerializeObject(v1, Formatting.Indented);
+
+Console.WriteLine(serializado);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //IF Ternários
+// int numero = 20;
+// bool ehPar = (numero % 2 ==0);
+
+// Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "ímpar"));
+
+
+// if(numero % 2 == 0)
+// {
+//     Console.WriteLine($"O número {numero} é par");
+// }
+// else{
+//     Console.WriteLine($"O número {numero} é ímpar");
+// }
+
+
+
+
+
+
+
+
+
+
+// //MEU CONSTRUTOR
+// Pessoa p1 = new Pessoa("Brena", "Paiva");
+
+// //MEU DESCONTRUTOR
+// (string nome, string sobrenome) = p1;
+// Console.WriteLine($"{nome} {sobrenome}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// LeituraArquivo arquivo = new LeituraArquivo();
+
+// var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+
+// if(sucesso)
+// {
+//     // Console.WriteLine("Quantidade de linhas: " + quantidadeLinhas);
+//     foreach(string linha in linhasArquivo)
+//     {
+//         Console.WriteLine(linha);
+//     }
+// }
+// else{
+//     Console.WriteLine("Não foi possível ler o arquivo");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// (int, string, string) tupla =  (22, "Brena", "Paiva");
+
+// Console.WriteLine($"Idade: {tupla.Item1}");
+// Console.WriteLine($"Nome: {tupla.Item2}");
+// Console.WriteLine($"Sobrenome: {tupla.Item3}");
 
 
 
