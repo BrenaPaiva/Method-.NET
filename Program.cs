@@ -2,17 +2,132 @@
 using System.Globalization;
 using Newtonsoft.Json;
 
+// <> representa uma classe genérica
+MeuArray<int> arrayInteiro = new MeuArray<int>();
+arrayInteiro.AdicionarElementoArray(30);
+
+Console.WriteLine(arrayInteiro[0]);
 
 
-string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+MeuArray<string> arrayString = new MeuArray<string>();
+arrayString.AdicionarElementoArray("Brena");
 
-List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+Console.WriteLine(arrayString[0]);
 
-foreach(Venda venda in listaVenda)
-{
-    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto} " +
-                        $"Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//VARIAVEL DINAMICA
+
+// dynamic variavelDinamica = 4;
+// Console.WriteLine($"Tipo da variavel: {variavelDinamica.GetType()}, valor: {variavelDinamica}");
+
+// variavelDinamica = "string";
+// Console.WriteLine($"Tipo da variavel: {variavelDinamica.GetType()}, valor: {variavelDinamica}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+
+// List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+// var listaAnonimo = listaVenda.Select(x => new { x.Produto, x.Preco });
+
+// foreach(var venda in listaAnonimo)
+// {
+//     Console.Write($"Produto: {venda.Produto}, Preço: {venda.Preco}");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var tipoAnonimo = new { Nome = "Brena", Sobrenome = "Paiva", Altura = 1.57 };
+// Console.WriteLine("Nome: " + tipoAnonimo.Nome);
+// Console.WriteLine("Sobrenome: " + tipoAnonimo.Sobrenome);
+// Console.WriteLine("Altura: " + tipoAnonimo.Altura);
+
+
+
+
+
+
+
+
+
+
+// bool? desejaReceberEmail = true;
+// //HASVALUE = Diferente de nulo  VALUE = Próprio valor dela 
+// if(desejaReceberEmail.HasValue && desejaReceberEmail.Value)
+// {
+//     Console.WriteLine("O usuário optou por receber e-mail.");
+// }else
+// {
+//     Console.WriteLine("O usuário não respondeu ou optou por não receber o e-mail");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+//DESERIALIZAÇÃO
+
+// string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+
+// List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+// foreach(Venda venda in listaVenda)
+// {
+//     Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto} " +
+//                         $"Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}" +
+//                         $" {(venda.Desconto.HasValue ? $"Desconto de: {venda.Desconto}" : "" )}"); //AQUI OCORREU O ERRO PORQUE DECIMAL NÃO ACEITA VALOR NULLO, ENTÃO EU ADICIONO UM "?" NO MEU DECIMAL
+// }
 
 
 
@@ -61,10 +176,11 @@ foreach(Venda venda in listaVenda)
 
 
 // //IF Ternários
-// int numero = 20;
-// bool ehPar = (numero % 2 ==0);
+int numero = 35;
+bool Par = false;
+Par = numero.EhPar(); //Quando adiciono o this, o próprio parametro vai ser ele mesmo(numero)
 
-// Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "ímpar"));
+Console.WriteLine($"O número {numero} é " + (Par ? "par" : "ímpar"));
 
 
 // if(numero % 2 == 0)

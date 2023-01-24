@@ -5,6 +5,15 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 
+
+
+
+
+
+
+
+//MUDANDO MINHA PROPRIEDADE
+
 public class  Venda
 {
     public int Id { get; set; }
@@ -13,6 +22,7 @@ public class  Venda
     public string Produto { get; set; }
     public decimal Preco  { get; set; }
     public DateTime DataVenda  { get; set; }
+    public decimal? Desconto  { get; set; }
 }
 
 
