@@ -3,12 +3,48 @@ using System.Globalization;
 using Newtonsoft.Json;
 
 
-Venda v1 = new Venda(1, "Material de escritório", 25.00M);
 
-string serializado = JsonConvert.SerializeObject(v1, Formatting.Indented);
+string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
 
-Console.WriteLine(serializado);
+List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
 
+foreach(Venda venda in listaVenda)
+{
+    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto} " +
+                        $"Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DateTime dataAtual = DateTime.Now;
+// List<Venda> listaVendas = new List<Venda>();
+// Venda v1 = new Venda(1, "Material de escritório", 25.00M, dataAtual);
+// Venda v2 = new Venda(2, "Cadeira e Setup", 25.00M, dataAtual);
+
+// listaVendas.Add(v1);
+// listaVendas.Add(v2);
+
+// string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented);
+// File.WriteAllText("Arquivos/vendas.json", serializado);
+// Console.WriteLine(serializado);
+// //ISO 8601
 
 
 
